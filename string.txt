@@ -1,0 +1,49 @@
+expandtabs = expand the space between string if there is \t
+example =
+x = "string \tstring"
+x.expandtabs(20)
+'string              string'
+
+find = find the string or variable in the string and indicate the location. First argument is the word for search, and second argument is the start location of the search
+example = 
+x = "string is not a string"
+x.find("str")
+0
+x.find("str",4)
+16
+x.find("str", 50)
+-1
+
+format = perform a string formating operation
+example =
+"I have {0} trees to {1}.".format(3,"cut")                                                    
+'I have 3 trees to cut.'
+
+format_map = is similar to string.format(**mapping), except that mapping is used directly and not copied to dict.
+example =
+people={
+    'name':['hey','dasf'],
+    'age':[12,3]
+    }
+'My name is {name[0]},i am {age[0]} old'.format_map(people)
+'My name is hey, i am 12 years old'
+
+index = exactly same as find, but it gives an error if there is no word for search.
+example =
+x = "string is not a string"
+x.index("str")
+0
+x.index("str",50)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: substring not found
+
+isalnum()
+Return true if all characters in the string are alphanumeric and there is at least one character, false otherwise.
+example + 
+x = "string123"
+x.isalnum()
+True
+x = "string**"
+x.isalnum()
+False
